@@ -53,7 +53,7 @@ gulp.task("data", function(){
 	1、建立工程
 	2、监听
 */
-gulp.task("build", ["copy-html", "scripts","copy-php", "images", "data","sass-bgsdetails","sass-bgs","sass"], function(){
+gulp.task("build", ["copy-html", "scripts","copy-php", "images", "data","sass-bgsdetails","sass-bgs","sass","sass-shopcar","sass-bootstrap","sass-register","sass-login"], function(){
 	console.log("工程已建立");
 })
 
@@ -91,6 +91,41 @@ gulp.task("sass-bgsdetails", function(){
 	.pipe(gulp.dest("dist/css"))
 	.pipe(connect.reload());
 })
+gulp.task("sass-shopcar", function(){
+	return gulp.src("stylesheet/shoppingcar.scss")
+	.pipe(sass())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minifyCSS())
+	.pipe(rename("shoppingcar.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
+gulp.task("sass-bootstrap", function(){
+	return gulp.src("stylesheet/bootstrap.css")	
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minifyCSS())
+	.pipe(rename("bootstrap.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
+gulp.task("sass-register", function(){
+	return gulp.src("stylesheet/register.scss")	
+	.pipe(sass())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minifyCSS())
+	.pipe(rename("register.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
+gulp.task("sass-login", function(){
+	return gulp.src("stylesheet/login.scss")	
+	.pipe(sass())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minifyCSS())
+	.pipe(rename("login.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
 
 
 //启动监听
@@ -103,6 +138,10 @@ gulp.task("watch", function(){
 	gulp.watch("*.php",["copy-php"]);
 	gulp.watch("stylesheet/bgs.scss",["sass-bgs"]);
 	gulp.watch("stylesheet/bgsdetails.scss",["sass-bgsdetails"]);
+	gulp.watch("stylesheet/shoppingcar.scss",["sass-shopcar"]);
+	gulp.watch("stylesheet/bootstrap.css",["sass-bootstrap"]);
+	gulp.watch("stylesheet/register.scss",["sass-register"]);
+	gulp.watch("stylesheet/login.scss",["sass-login"]);
 	// gulp.watch("*.json",["copy-json"]);
 })
 

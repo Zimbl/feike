@@ -1,6 +1,112 @@
 define(["jquery","jquery-cookie"],function ($) { 
     function commoditydtl() {
-        sc_num()
+        $(function(){
+            sc_num()
+        $.ajax({
+            url: "data/fangdajing.json",
+            // dataType: "json", 自动识别
+            success: function(arr){
+                for(var i = 0; i < arr.length; i++){
+                    var node6 = $(`  
+                    <li id="${arr[i].id}"><img src="${arr[i].img}" alt=""></li>
+                    
+                        `);
+                    node6.appendTo(".goodsMainPic ul");
+                    
+                };                                                                                                          
+            },
+                error: function(msg){
+                alert(msg);
+            }
+
+                        }) ;  
+        
+        $.ajax({
+            url: "data/fangdajing.json",
+            // dataType: "json", 自动识别
+            success: function(arr){
+                for(var i = 0; i < arr.length; i++){
+                    var node6 = $(`  
+                    <li id="${arr[i].id}" class="image-list"><span><img src="${arr[i].img}" alt=""" alt=""></span></li>
+                        `);
+                    node6.appendTo(".picList .clearfix");
+                    
+                };                                                                                                          
+            },
+                error: function(msg){
+                alert(msg);
+            }
+
+                        }) ;   
+
+        $.ajax({
+            url: "data/fangdajing.json",
+            // dataType: "json", 自动识别
+            success: function(arr){
+                for(var i = 0; i < arr.length; i++){
+                    var node6 = $(`  
+                    <li id="${arr[i].id}"><img src="${arr[i].img}" alt=""></li>
+                    
+                        `);
+                    node6.appendTo(".bigpic-ul");
+                    
+                };                                                                                                          
+            },
+                error: function(msg){
+                alert(msg);
+            }
+
+                        }) ;  
+        
+        $.ajax({
+            url: "data/xiangqingye.json",
+            // dataType: "json", 自动识别
+            success: function(arr){
+                for(var i = 0; i < arr.length; i++){
+                    var node6 = $(`  
+                    <div class="screen">
+                         <a href="">
+                              <img src="${arr[i].img}" alt="">
+                         </a>
+                    </div>
+                        `);
+                    node6.appendTo(".goods-detail-desc .detail-desc");
+                    
+                };                                                                                                          
+            },
+                error: function(msg){
+                alert(msg);
+            }
+
+                        }) ; 
+        
+                        $.ajax({
+                            url: "data/tuijian.json",
+                            // dataType: "json", 自动识别
+                            success: function(arr){
+                                for(var i = 0; i < arr.length; i++){
+                                    var node6 = $(`  
+                                    <div class="recommend-item">
+                                    <div class="recommend-item-content">
+                                        <a target="_blank" class="block" href="#">
+                                             <img src="${arr[i].img}" width="240" height="240" data-bd-imgshare-binded="1">
+                                         </a>
+                                          <a target="_blank" href="#" class="block f16 mt5 mb8">
+                                                    ${arr[i].title}				
+                                            </a>
+                                              <p class="f13">￥${arr[i].price}</p>
+                                    </div>
+                                    </div>
+                                        `);
+                                    node6.appendTo(".recommend-info");
+                                    
+                                };                                                                                                          
+                            },
+                                error: function(msg){
+                                alert(msg);
+                            }
+                
+                                        }) ; 
 
 
 
@@ -45,6 +151,8 @@ define(["jquery","jquery-cookie"],function ($) {
             }
 
                         }) ; 
+        })
+        
         }
 
         function sc_num() {

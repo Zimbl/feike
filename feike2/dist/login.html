@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body{background: url(bg.png) center no-repeat;}
+        #login{width: 400px; margin: 100px auto}
+        #colwarning{padding: 5px; margin: 0px; text-align: center; display: none}
+    </style>
+    <script src = 'ajax.js'></script>
+    <script>
+        window.onload = function(){
+            var oSubmit = document.getElementById("submit");
+            var oColwarning = document.getElementById("colwarning");
+            var aInputs = document.getElementsByTagName("input");
+            oSubmit.onclick = function(){
+                $ajax({
+                    type:"post",
+                    url:"login.php",
+                    data:{
+                        username:aInputs[0].value,
+                        password: aInputs[1].value
+                    },
+                    success: function(msg){
+                        var obj = JSON.parse(msg);
+                        if(obj.code){
+                            oColwarning.style.display = 'block';
+                            oColwarning.innerHTML = obj.message;
+
+                        }else{
+                            oColwarning.style.display = 'block';
+                            oColwarning.className = "alert alert-success";
+                            oColwarning.innerHTML = obj.message;
+                            setInterval(function(){
+
+                                location.assign("list.html");
+                            },1000)
+                        }
+                    },
+                    error:function(msg){
+                        alert(msg);
+                    }
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class = 'panel panel-primary' id = 'login'>
+        <div class = 'panel-heading'>
+            登陆
+        </div>
+        <div class = 'panel-body'>
+            <div class = 'form-group'>
+                <label for="username">用户名：</label>
+                <input type="text" class = 'form-control' placeholder="用户名">
+            </div>
+            <div class = 'form-group'>
+                <label for="password">密码：</label>
+                <input type="password" class = 'form-control' placeholder="密码">
+            </div>
+            <div class = 'form-group'>
+                <div id = 'colwarning' class = 'alert alert-danger'>错误警告</div>
+            </div>
+            <a href="register.html" class = 'text text-warning'>马上注册</a>
+            <button id = 'submit' class = 'btn btn-primary pull-right'>登陆</button>
+        </div>
+
+    </div>
+</body>
+</html>

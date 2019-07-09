@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/register.css">
+
+    
+    <script src = 'js/require.js' defer async="true" data-main = 'js/register'></script>
+  
+ 
+</head>
+<body>
+    <!-- head -->
+    <div class = "headbox">
+            <div class="headbox_top">
+                <ul class="headbox_ul1">
+                    <li>
+                        <span class="iconfont">&#xe65f;</span>
+                        <a href="https://www.flyco.com/?fc=u1.c52479.g52480.k1504845752143.pz">收藏</a>
+                    </li>
+                    <li>
+                        <span class="iconfont">&#xe660;</span>
+                        <img src="https://www.flyco.com/theme/feike_pc//images/weixin.jpg" style="display:none;">微信</li>
+                </ul>
+                <ul class="headbox_ul2">
+                    <li><a target="_blank" href="登录.html">登录</a></li>                 
+                    <li><a target="_blank" href="注册.html">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    <!-- banner_top -->
+        <div class="banner_top clear">
+            <div class="logo">
+                <a href="">
+                    <img src="https://pic.flyco.net.cn/sources/new_pc/logo.gif" alt="">
+                </a>
+            </div>
+            <div class="logo-head">
+                <img src="https://pic.flyco.net.cn/sources/new_pc/home.png" alt="">
+                <span>首页</span>
+            </div>
+            <div class="shopcar" >
+                <a href="shoppingcar.html" class="mini-car clear" id="banner_top_shopcar">
+                    <i class="iconfont">&#xf0179;</i>
+                    购物车
+                    <span class="mini-car-num sc_num">(0)</span>
+                </a>
+                <div class = "mini-car-list">
+                    <div class = "list-1 clear">
+                        <div class="f1">
+                            <h5>
+                                共计0件商品
+                            </h5>
+                            <p>合计：
+                                <span>0元</span>
+                            </p>
+                        </div>
+                        <input type="button" class="btn" value="去购物车结算">
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <form action="">
+                    <input class="txt" type="text"  value="剃须刀">
+                    <input class="btn" type="button">
+                    <div>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- 注册框 -->
+    <div class = 'panel panel-primary' id = 'register'>
+        <div class = 'panel-heading'>
+            欢迎注册飞科账号
+        </div>
+        <div class = 'panel-body'>
+            <div class = 'form-group'>
+                <label for="username">用户名：</label>
+                <input id = 'username' type="text" class = 'form-control' placeholder="用户名" >
+                <span id = 'username_span'>6~18个字符，可使用字母、数字、下划线，需以字母开头</span><br>
+            </div>
+            <div class = 'form-group'>
+                <label for="password">密码：</label>
+                <input id = 'password' type="password" class = 'form-control' placeholder="密码" ><br>
+                <span id = 'password_span'>请输入密码</span><br>
+                <div id = 'qiangdu'>
+                    <span>弱</span>
+                    <span>中</span>
+                    <span>强</span>
+                </div>
+            </div>
+            <div class = 'form-group'>
+                <label for="repassword">确认密码：</label>
+                <input id = 'ispassword'  type="password" class = 'form-control' placeholder="确认密码">
+                <span id = 'ispassword_span'>请输入密码</span><br>
+            </div>
+            <div class = 'form-group'>
+                   <!--  <span class = 'biaotou'>手机号码：</span>
+                    <input id = 'telephone' type="text"   onblur = "blurPhone();"><br>
+                    <span id = 'telephone_span'>11个字符，只可使用 数字 </span><br> -->
+                    <label for="phone">手机号码</label>
+                    <input id = 'telephone'  type="text" class = 'form-control' placeholder="确认密码">
+                    <span id = 'telephone_span'>11个字符，只可使用 数字</span><br>
+            </div>
+            <div class = 'form-group'>
+                <div id = 'colwarning' class = 'alert alert-danger'>错误警告</div>
+            </div>
+            <a href="login.html" class = 'text text-warning'>马上登陆</a>
+            <button id = 'submit' class = 'btn btn-primary pull-right'>同意协议并注册</button>
+        </div>
+
+    </div>
+    <!-- 底部 -->
+    <div class="buttom-box">
+            <div class="inner-footer clear">
+                <ul class="inner-footer-ul">
+                
+                </ul>
+            </div>
+            <div class="center-footer">
+                <div class="center-footer-one">
+                  <!--   <dl>
+                        <dt>购物服务</dt>
+                        <dd><a href=""></a></dd>
+                        <dd><a href=""></a></dd>
+                        <dd><a href=""></a></dd>
+                    </dl> -->
+              
+                </div>
+                <div class="center-footer-two">
+                    <img src="../images/buttom_03.gif" alt="">
+                    
+                </div>
+                 
+            </div>
+            <div class="bottom-footer">
+                 <img class="feike" src="images/buttom_1_03.gif" alt=""> 
+                <div class="f2">
+                    <p class="p1"> 
+                            Copyright © 2013-2016上海飞科电器股份有限公司 | 版权所有 | <a href="">网站备案/许可证号：沪ICP备13041208号</a></p>
+                    <p>
+                        <a href="">增值电信营业经营许可认证:沪B2-20160083 | </a>
+                        <a href="">
+                            <img src="images/footer-buttom_12.gif" alt="">
+                            <span>沪公网安备 31010502001341号</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="f3">
+                    <a href=""><img src="images/footer-buttom_03.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <a href=""><img src="images/footer-buttom_05.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <a href=""><img src="images/footer-buttom_07.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <img src="images/footer-buttom_09.gif" alt="">
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

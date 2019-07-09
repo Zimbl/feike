@@ -12,7 +12,7 @@ define(["jquery","jquery-cookie"], function($){
                          
                             <li class="li1 act">
                                 <div class="msg">
-                                    <h3 class="title" ><a href="" target="_blank">${arr[i].title}</a></h3>
+                                    <h3 class="title" ><a href="#" target="_blank">${arr[i].title}</a></h3>
                                     <p class="desc">${arr[i].desc}</p>
                                     <p class="price">
                                         <span class="num">${arr[i].price}</span> 元&nbsp;
@@ -20,7 +20,7 @@ define(["jquery","jquery-cookie"], function($){
                                     </p>
                                 </div>
                                 <div class="figure">
-                                    <a href=""><img src="${arr[i].img}" alt=""></a>
+                                    <a href="bgsdetails.html"><img src="${arr[i].img}" alt=""></a>
                                 </div>
                             </li>
                      
@@ -54,7 +54,7 @@ define(["jquery","jquery-cookie"], function($){
                         </p>
                         <p class="price">${arr[i].price}元</p>
                         <div class="figure">
-                            <a href="">
+                            <a href="bgsdetails.html">
                                 <img src="${arr[i].img}" alt="">
                             </a>
                         </div>
@@ -91,7 +91,7 @@ define(["jquery","jquery-cookie"], function($){
                             </p>
                         </div>
                         <div class="figure">
-                            <a href=""><img src="${arr[i].img}" alt=""></a>
+                            <a href="bgsdetails.html"><img src="${arr[i].img}" alt=""></a>
                         </div>
                     </li>
                             `);

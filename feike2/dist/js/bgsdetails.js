@@ -20,6 +20,8 @@ console.log("成功");
         "jquery-cookie":"jquery.cookie",
         "commoditydtl":"commoditydtl",
         "shopcar":"shopcar",
+        "tabs":"tabs",
+        "big":"fangdajing"
      },
      shim:{
         "jquery-cookie":["jquery"],
@@ -29,7 +31,9 @@ console.log("成功");
      }
  })
 
- require(["commoditydtl","shopcar"],function(commoditydtl,shopcar){
+ require(["commoditydtl","shopcar","tabs","big"],function(commoditydtl,shopcar,tabs,big){
     commoditydtl.commoditydtl();
     shopcar.shopcar();
+    tabs.tabs();
+    big.big();
  })

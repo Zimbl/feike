@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>飞科——购物车</title>
+    <link rel="stylesheet" href="css/shoppingcar.css">
+    <script src = 'js/require.js' defer async="true" data-main = 'js/shoppingcar'></script>
+</head>
+<body>
+       <!-- head -->
+     <div class = "headbox">
+        <div class="headbox_top">
+            <ul class="headbox_ul1">
+                <li>
+                    <span class="iconfont">&#xe65f;</span>
+                    <a href="https://www.flyco.com/?fc=u1.c52479.g52480.k1504845752143.pz">收藏</a>
+                </li>
+                <li>
+                    <span class="iconfont">&#xe660;</span>
+                    <img src="https://www.flyco.com/theme/feike_pc//images/weixin.jpg" style="display:none;">微信</li>
+            </ul>
+            <ul class="headbox_ul2">
+                <li><a target="_blank" href="登录.html">登录</a></li>                 
+                <li><a target="_blank" href="注册.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+<!-- banner_top -->
+    <div class="banner_top clear">
+        <div class="logo">
+            <a href="">
+                <img src="https://pic.flyco.net.cn/sources/new_pc/logo.gif" alt="">
+            </a>
+        </div>
+        <div class="logo-head">
+            <img src="https://pic.flyco.net.cn/sources/new_pc/home.png" alt="">
+            <span>首页</span>
+        </div>
+        <div class="shopcar sc-pic" >
+            <a href="shoppingcar.html" class="mini-car clear" id="banner_top_shopcar">
+                <i class="iconfont">&#xf0179;</i>
+                购物车
+                <span class="mini-car-num sc_num">(0)</span>
+            </a>
+            <div class = "mini-car-list">
+                <ul></ul>
+                <div class = "list-1 clear">
+                    <div class="f1">
+                        <h5>
+                            共计0件商品
+                        </h5>
+                        <p>合计：
+                            <span>0元</span>
+                        </p>
+                    </div>
+                    <input type="button" class="btn" value="去购物车结算">
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <form action="">
+                <input class="txt" type="text" value="剃须刀">
+                <input class="btn" type="button">
+                <div>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+            </form>
+        </div>
+    </div>
+<!-- shoppingcar -->
+   <div class="shopcarbox">
+        <div class="order_tit">
+            <img src="images/car_03.gif" alt="">
+        </div>
+        <table class="shop_cart "> 
+            <thead>
+                <tr class="shopcar_top">
+                    <th>
+                        <input type="checkbox" name="selectAll">
+                    </th>
+                    <th class="tl1">商品</th>
+                    <th class="tl2">单价</th>
+                    <th class="tl3">数量</th>
+                    <th class="tl4">小计</th>
+                    <th class="tl5">操作</th>
+                </tr>
+               
+            </thead>
+            <tbody class="shopcar_body">
+                <!-- <tr>
+                        <td>
+                            <input type="checkbox" checked="" name="check">
+                        </td>
+                        <td>
+                            <div class="cart_proItem clear">
+                                <a href="" class="cartImg">
+                                    <img src="https://pic.flyco.net.cn/sources/goods/FH7006/FH7006_000_01.jpg?aa=06@1e_1c_0o_0l__120h_120w.src" alt="">
+                                </a>
+                                <div class="cart_name">FH7006 飞科电子秤FH7006</div>
+                            </div>
+                        </td>
+                        <td class="td3">￥129</td>
+                        <td> 
+                            <div class="cartNum clear">
+                                <a href="" class="reduce button">-</a>
+                                <input type="text" class="number" value="1">
+                                <a href="" class="add button">+</a>
+                            </div>
+                        </td>
+                        <td class="subtotal">￥129</td>
+                        <td>
+                            <a href="">删除</a>
+                        </td>
+                </tr> -->
+            </tbody>
+        </table>
+        <h1 class="cart_empty"><a href="">清空购物车</a></h1>
+        <h1 class="cart_empty"><a href="">删除选中项</a></h1>
+        <div class="shop_total clear">
+            <class class="fr">
+                <span>商品总计：</span>
+                <strong>
+                    
+                    <b class="total_price">0.00</b>
+                    <em class="f14">元</em>
+                </strong>
+            </class>
+        </div>
+        <div class="cart_btn clear">
+            <a class="go_next" href="">去结算</a>
+            <a class="go_back" href="bgs.html">继续购物</a>
+            
+        </div>
+   </div>
+    <!-- 网页底部 -->
+    <div class="buttom-box">
+            <div class="inner-footer clear">
+                <ul class="inner-footer-ul">
+                
+                </ul>
+            </div>
+            <div class="center-footer">
+                <div class="center-footer-one">
+                  
+              
+                </div>
+                <div class="center-footer-two">
+                    <img src="../images/buttom_03.gif" alt="">
+                    
+                </div>
+                 
+            </div>
+            <div class="bottom-footer">
+                 <img class="feike" src="images/buttom_1_03.gif" alt=""> 
+                <div class="f2">
+                    <p class="p1"> 
+                            Copyright © 2013-2016上海飞科电器股份有限公司 | 版权所有 | <a href="">网站备案/许可证号：沪ICP备13041208号</a></p>
+                    <p>
+                        <a href="">增值电信营业经营许可认证:沪B2-20160083 | </a>
+                        <a href="">
+                            <img src="images/footer-buttom_12.gif" alt="">
+                            <span>沪公网安备 31010502001341号</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="f3">
+                    <a href=""><img src="images/footer-buttom_03.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <a href=""><img src="images/footer-buttom_05.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <a href=""><img src="images/footer-buttom_07.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <img src="images/footer-buttom_09.gif" alt="">
+                </div>
+            </div>
+        </div>
+</body>
+</html>
