@@ -9,7 +9,8 @@ require.config({
         "yanzheng":"yanzheng",
         "zhuce":"zhuce",
         "shopcar":"shopcar",
-        "sc_num":"sc_num"
+        "sc_num":"sc_num",
+        "commodityreg":"commodityreg"
 
     },
     shim:{
@@ -17,9 +18,10 @@ require.config({
     }
 })
 
-require(["ajax", "yanzheng","zhuce","shopcar","sc_num"],function (ajax, yanzheng,zhuce,shopcar,sc_num) { 
+require(["ajax", "yanzheng","zhuce","shopcar","sc_num","commodityreg"],function (ajax, yanzheng,zhuce,shopcar,sc_num,commodityreg) { 
     yanzheng.yanzheng();
     zhuce.zhuce();
     shopcar.shopcar();
     sc_num.sc_num();
+    commodityreg.commodityreg();
  })

@@ -1,7 +1,11 @@
 define(["jquery","jquery-cookie"],function ($) { 
+    $(".cart_empty").on("click",function (ev) { 
+        var e = ev || window.event;
+        preDef(e);
+     })
     function  commodityspcar() {
         
-        sc_msg()
+        sc_msg();
         sc_num();
 
         $.ajax({
@@ -45,7 +49,39 @@ define(["jquery","jquery-cookie"],function ($) {
             }
 
                         }) ; 
-       
+     /* 添加删除事件 */  
+        $(".shopcar_body").on("click",".delete-one",function () { 
+            var id = this.id;
+            //1、删除页面上的数据
+            $(this).closest('tr').remove();
+            //2、删除cookie中的数据 
+            var cookieArr = JSON.parse($.cookie("goods"));
+            for(var i =0; i < cookieArr.length;i++){
+                if(cookieArr[i].id == id){
+                    cookieArr.splice(i,1);
+                    break;
+                }
+            }
+            if(!cookieArr.length){
+                $.cookie("goods",null);
+                $(".shop_total ").find(".total_price").text(`￥0元`);
+            }else{
+                $.cookie("goods",JSON.stringify(cookieArr),{
+                    rxpires:7
+                })
+            }
+            sc_num();
+         })
+         $(".delete-all").on("click",function () { 
+             alert("确定删除购物车？")
+              //1、删除页面上的数据
+            $(".shopcar_body").children("tr").remove();
+            //2、删除cookie中的数据 
+            $.cookie("goods",null);
+            sc_num();
+          })
+
+       /* 购物车加减事件 */
         $(".shopcar_body").on("click",".button",function () { 
             
             var id = $(this).closest("div").attr("id");
@@ -75,7 +111,7 @@ define(["jquery","jquery-cookie"],function ($) {
 
        
         }
-
+/* 计算总数总价 */
         function sc_num() {
             var cookieStr = $.cookie("goods");
             if(!cookieStr){
@@ -101,6 +137,7 @@ define(["jquery","jquery-cookie"],function ($) {
             }
                 
           }
+    /* 加载购物车 */
           function sc_msg(){
             
               $(".shopcar_body").html("");
@@ -150,7 +187,7 @@ define(["jquery","jquery-cookie"],function ($) {
                                     </td>
                                     <td class="subtotal">${subtotalArr[i]}</td>
                                     <td>
-                                        <a href="">删除</a>
+                                        <p id = "${cookieArr[i].id}" class="delete-one" >删除</p>
                                     </td>
                                 </tr>
                               `).appendTo($(".shopcar_body"));
@@ -162,6 +199,14 @@ define(["jquery","jquery-cookie"],function ($) {
                   })
               }
           }
+
+          function preDef(e){
+            if(e.preventDefault){
+                e.preventDefault();
+            }else{
+                window.event.returnValue = false;
+            }
+        }
         
 
       return{

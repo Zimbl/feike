@@ -7,6 +7,8 @@
 	$repassword = $_POST["repassword"];
     $addTime = $_POST["addTime"];
     $strLength = strlen($password);
+    $telePhone = $_POST["telePhone"];
+    $authCode = $_POST["authCode"];
     
     /*
 		简单验证一下提交过来的数据
@@ -36,6 +38,18 @@
 	if($password != $repassword){
 		$responseData["code"] = 3;
 		$responseData["message"] = "两次密码输入不一致";
+		echo json_encode($responseData);
+		exit;
+    }
+    if($telePhone != "可使用"){
+		$responseData["code"] = 8;
+		$responseData["message"] = "电话号码不正确";
+		echo json_encode($responseData);
+		exit;
+    }
+    if($authCode != "通过"){
+		$responseData["code"] = 9;
+		$responseData["message"] = "验证码不正确";
 		echo json_encode($responseData);
 		exit;
     }

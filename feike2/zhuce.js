@@ -14,8 +14,9 @@ define(["ajax","jquery"],function (ajax,$) {
                         username: $(".form-group #username").val(),
                         password: $(".form-group #password").val(),
                         repassword: $(".form-group #ispassword").val(),
-                        addTime:(new Date()).getTime()
-
+                        addTime:(new Date()).getTime(),
+                        telePhone: $(".form-group #telephone_span").text(),
+                        authCode: $(".form-group #authcode_span").text()
                     },
                     success: function(msg){
                         var obj = JSON.parse(msg);
@@ -27,9 +28,9 @@ define(["ajax","jquery"],function (ajax,$) {
                             oColwarning.style.display = 'block';
                             oColwarning.className = "alert alert-success";
                             oColwarning.innerHTML = obj.message;
-                           /*  setTimeout(function(){
+                            setTimeout(function(){
                                 location.assign("login.html");
-                            },1000) */
+                            },1000)
                         }
                     },
                     error:function(msg){

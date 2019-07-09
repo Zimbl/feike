@@ -480,7 +480,11 @@ html, body {
     margin-left: 30px;
     padding-left: 30px;
     font-family: "Microsoft Yahei", sans-serif;
-    display: inline; }
+    display: inline;
+    /*  p{
+                font-size: 15px;
+                color: #9fa0a0;
+            } */ }
     .shopcarbox .cart_empty a {
       font-size: 15px;
       color: #9fa0a0; }

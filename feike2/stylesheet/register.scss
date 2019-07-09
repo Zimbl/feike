@@ -314,6 +314,9 @@ html,body{
       height:25px;
       float: right;
     }
+    #authcode{
+        width:200px;
+    }
     .panel-heading{
       color: #0c82d9;
       text-align: center;
@@ -330,12 +333,23 @@ html,body{
           display: block;
 
         }
+        p{
+            color:#0c82d9;
+        }
+        #random{
+            border:1px solid black;
+            float:right;
+            width:72px;
+            height:29px;
+            font-size:20px;
+        }
       }
       #submit{
         float: right;
         margin-right:40px;
         width:272px;
         height:30px;
+        background-color: #0c82d9;
       }
     }
 
@@ -347,13 +361,15 @@ html,body{
 
 #register{width: 400px; margin: 100px auto}
 #colwarning{padding: 5px; margin: 0px; text-align: center; display: none}
-#username_span{font-size: 12px; color: red;}
+#username_span{font-size: 12px; color: gray;}
+#telephone_span{font-size: 12px; color: gray;}
+#authcode_span{font-size: 12px; color: gray;}
 #qiangdu{
       position: absolute;
       top:325px;left:85px;
     }
 #qiangdu span{
-      font-size: 12px; color: red;width:90px;
+      font-size: 12px; color: gray;width:90px;
       height:20px;display: block;float: left;
       background-color: gray;
     }
@@ -364,119 +380,119 @@ html,body{
     #qiangdu .yuanben{     
       font-size: 12px;background-color: gray; color: black;
     }
-    #password_span{font-size: 12px; color: red;}
-    #ispassword_span{font-size: 12px; color: red;}
+    #password_span{font-size: 12px; color: gray;}
+    #ispassword_span{font-size: 12px; color: gray;}
 
   /* 底部******************************************************************** */
-  .buttom-box{
-    width:1903px;
-    height:539px;
-    background:#fafafa;
-}
-.buttom-box .inner-footer{
-    width:1240px;
-    height:141px;
-   border-bottom: 2px solid #ecedef;
-   height: 141px;
-   color: #0061af;
-   margin:0 auto;
-}
-.inner-footer-ul{
-    display: block;
-    width:100%;
-    height:141
-}
-.inner-footer-ul li{
-   float:left;
-   display: block;
-   padding-left:40px;
-   padding-right:40px;
-   height:100px;
-}
-.inner-footer-ul li img{
-     
-}
-.inner-footer-ul li span{
-    display: inline-block;
-    margin-top:64px;
-    font-size: 18px;
-    color:black;
-    font-family: "Microsoft Yahei", sans-serif;
-}
-.center-footer{
-    margin:0 auto;
-    width:1240px;
-    height:181px;
-    border-bottom: 2px solid #ecedef;
-    position: relative;
-}
-.center-footer .center-footer-one{
-   float: left;
-   display: inline;
-   width:760px;
-   height:181px;
+        .buttom-box{
+            width:1903px;
+            height:539px;
+            background:#fafafa;
+        }
+        .buttom-box .inner-footer{
+            width:1240px;
+            height:141px;
+        border-bottom: 2px solid #ecedef;
+        height: 141px;
+        color: #0061af;
+        margin:0 auto;
+        }
+        .inner-footer-ul{
+            display: block;
+            width:100%;
+            height:141
+        }
+        .inner-footer-ul li{
+        float:left;
+        display: block;
+        padding-left:40px;
+        padding-right:40px;
+        height:100px;
+        }
+        .inner-footer-ul li img{
+            
+        }
+        .inner-footer-ul li span{
+            display: inline-block;
+            margin-top:64px;
+            font-size: 18px;
+            color:black;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        .center-footer{
+            margin:0 auto;
+            width:1240px;
+            height:181px;
+            border-bottom: 2px solid #ecedef;
+            position: relative;
+        }
+        .center-footer .center-footer-one{
+        float: left;
+        display: inline;
+        width:760px;
+        height:181px;
 
-}
-.center-footer .center-footer-one dl{
-   width: 140px;
-   padding: 32px 0 41px;
-   margin-left: 50px;
-   float: left;
-   display: inline;
-   font-size: 14px;
-   color: #333;
-   font-family: "Microsoft Yahei", sans-serif;
-}
-.center-footer .center-footer-one dl dt{
-   color: #2f2f2f;
-   margin-bottom: 12px;
-   font-weight: bold;
-   font-family: "Microsoft Yahei", sans-serif;
-   font-size: 16px;
-}
-.center-footer .center-footer-one dl dd{
-   display: block;
-   margin-bottom: 8px;
-   margin-top: 5px;
-}
+        }
+        .center-footer .center-footer-one dl{
+        width: 140px;
+        padding: 32px 0 41px;
+        margin-left: 50px;
+        float: left;
+        display: inline;
+        font-size: 14px;
+        color: #333;
+        font-family: "Microsoft Yahei", sans-serif;
+        }
+        .center-footer .center-footer-one dl dt{
+        color: #2f2f2f;
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-family: "Microsoft Yahei", sans-serif;
+        font-size: 16px;
+        }
+        .center-footer .center-footer-one dl dd{
+        display: block;
+        margin-bottom: 8px;
+        margin-top: 5px;
+        }
 
-.center-footer .center-footer-two{
-   float: left;              
-}
-.bottom-footer{
-   
-    width: 1240px;
-    height:215px;
-    margin: 0 auto;
-}
-.bottom-footer .feike{
-   float:left;
-   width: 145px;
-   height: 17px;
-   margin-top: 36px;
-   margin-right: 30px;
-}
-.bottom-footer .f2{
-   color: #939191;
-   width: 570px;
-   float:left;
+        .center-footer .center-footer-two{
+        float: left;              
+        }
+        .bottom-footer{
+        
+            width: 1240px;
+            height:215px;
+            margin: 0 auto;
+        }
+        .bottom-footer .feike{
+        float:left;
+        width: 145px;
+        height: 17px;
+        margin-top: 36px;
+        margin-right: 30px;
+        }
+        .bottom-footer .f2{
+        color: #939191;
+        width: 570px;
+        float:left;
 
-}
-.bottom-footer .f2 .p1{
- margin-top: 25px;
-}
-.bottom-footer .f3{
- 
- line-height: 37px;
- color: #898989;
- float:right;
- margin-top: 15px;
-}
-.bottom-footer .f3 a{
-  width:90px;
-}
-.bottom-footer .f3 span{
- font-size: 37px;
- position: relative;
- top:10px;
-}
+        }
+        .bottom-footer .f2 .p1{
+        margin-top: 25px;
+        }
+        .bottom-footer .f3{
+        
+        line-height: 37px;
+        color: #898989;
+        float:right;
+        margin-top: 15px;
+        }
+        .bottom-footer .f3 a{
+        width:90px;
+        }
+        .bottom-footer .f3 span{
+        font-size: 37px;
+        position: relative;
+        top:10px;
+        }

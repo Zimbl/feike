@@ -70,6 +70,78 @@ define(["ajax"],function (ajax) {
          }
 
        }
+
+//手机号码************************************************************  
+        var telePhone = document.getElementById("telephone");         
+        telePhone.onblur = function (){
+       
+        var telePhone_span = document.getElementById("telephone_span");
+        var tValue = telePhone.value.replace(/ /g,"");
+        telePhone.value = tValue;
+        if(tValue.length != 11){
+            telePhone_span.innerHTML = '长度应为11个字符';
+        }else if( tValue[0] != '1'){
+        telePhone_span.innerHTML = '以数字1开头';
+        }else{
+            var isyes = true;
+            for(var i = 0; i < tValue.length; i++){
+                if(!jisuan(tValue[i])){
+                        isyes = false
+                        break;
+                }
+        }
+        if(isyes){
+            telePhone_span.innerHTML = '可使用';
+        }else{
+            telePhone_span.innerHTML = '请使用数字'
+        }
+        }
+        }
+        function jisuan(num){
+            if(num <= "9" && num >= "0"){
+                return true
+            }else{
+                return false
+            }
+        }   
+        
+//验证码*******************************************************************
+    var authCode = document.getElementById('authcode');
+
+    authCode.onblur = function (){
+            var authCode_span = document.getElementById('authcode_span');
+            // var aValue = authCode.value.replace(/ /g,'');
+            // authCode.value = aValue;
+            var ranDom_span = document.getElementById('random_span');
+            
+            if(authCode.value == random.innerHTML || authCode.value.toLowerCase() == random.innerHTML.toLowerCase()){
+                authCode_span.innerHTML = '通过';
+            }else{
+                authCode_span.innerHTML = '验证码不正确'
+            }
+
+        }
+        var ranDom_span = document.getElementById('random_span');
+        ranDom_span.onclick =function(){
+            function test(n){
+            var arr = [];
+            for(var i = 0; i < n ;i++){
+                var tmp = parseInt(Math.random()*123);
+                if( tmp >= 0 && tmp <= 9){
+                    arr.push(tmp);
+                }else if(tmp >= 65  && tmp <= 90  || tmp >=97 &&tmp <=122){
+                    var char = String.fromCharCode(tmp);
+                    arr.push(char);
+                }else{
+                    i--;
+                } 
+            }
+            return arr.join('')
+            }
+            var random = document.getElementById('random');
+            random.innerHTML = test(6); 
+            
+        }
         
 
      }

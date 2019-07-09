@@ -298,6 +298,8 @@ html, body {
     width: 272px;
     height: 25px;
     float: right; }
+  .panel #authcode {
+    width: 200px; }
   .panel .panel-heading {
     color: #0c82d9;
     text-align: center;
@@ -310,11 +312,20 @@ html, body {
       .panel .panel-body .form-group span {
         float: right;
         display: block; }
+      .panel .panel-body .form-group p {
+        color: #0c82d9; }
+      .panel .panel-body .form-group #random {
+        border: 1px solid black;
+        float: right;
+        width: 72px;
+        height: 29px;
+        font-size: 20px; }
     .panel .panel-body #submit {
       float: right;
       margin-right: 40px;
       width: 272px;
-      height: 30px; }
+      height: 30px;
+      background-color: #0c82d9; }
 
 #register {
   width: 400px;
@@ -328,7 +339,15 @@ html, body {
 
 #username_span {
   font-size: 12px;
-  color: red; }
+  color: gray; }
+
+#telephone_span {
+  font-size: 12px;
+  color: gray; }
+
+#authcode_span {
+  font-size: 12px;
+  color: gray; }
 
 #qiangdu {
   position: absolute;
@@ -337,7 +356,7 @@ html, body {
 
 #qiangdu span {
   font-size: 12px;
-  color: red;
+  color: gray;
   width: 90px;
   height: 20px;
   display: block;
@@ -356,11 +375,11 @@ html, body {
 
 #password_span {
   font-size: 12px;
-  color: red; }
+  color: gray; }
 
 #ispassword_span {
   font-size: 12px;
-  color: red; }
+  color: gray; }
 
 /* 底部******************************************************************** */
 .buttom-box {
