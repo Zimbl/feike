@@ -124,7 +124,7 @@ define(["jquery","jquery-cookie"], function($){
                             </p>
                             <p class="price">${arr[i].price}</p>
                             <div class="figure">
-                                <a href="">
+                                <a href="bgsdetails.html">
                                     <img src="${arr[i].img}" alt="">
                                 </a>
                             </div>                                                                                             
@@ -162,7 +162,7 @@ define(["jquery","jquery-cookie"], function($){
                             </p>
                         </div>
                         <div class="figure">
-                            <a href=""><img src="${arr[i].img}" alt=""></a>
+                            <a href="bgsdetails.html"><img src="${arr[i].img}" alt=""></a>
                         </div>
                     </li>
                             `);
@@ -188,7 +188,7 @@ define(["jquery","jquery-cookie"], function($){
                         var node5 = $(`  
                         <li class="items-3-li act">
                             <div class="figure-bottom">
-                            <a href="">
+                            <a href="bgsdetails.html">
                                 <img src="${arr[i].img}" alt="">
                             </a>
                             </div>
@@ -236,7 +236,7 @@ define(["jquery","jquery-cookie"], function($){
                             </p>
                         </div>
                         <div class="figure">
-                            <a href=""><img src="${arr[i].img}" alt=""></a>
+                            <a href="bgsdetails.html"><img src="${arr[i].img}" alt=""></a>
                         </div>
                          </li>
                             `);
@@ -278,7 +278,7 @@ define(["jquery","jquery-cookie"], function($){
                                 <span class="old-num">${arr[i].oldprice}</span>
                                 </p>
                                 <div class="figure">
-                                <a href="">
+                                <a href="bgsdetails.html">
                                     <img src="${arr[i].img}" alt="">
                                 </a>
                                 </div>

@@ -47,7 +47,7 @@
           echo json_encode($responseData);
       }else{
           $responseData['code'] = 4;
-          $responseData['message'] = "错误";
+          $responseData['message'] = "用户名或密码错误";
           echo json_encode($responseData);
       }
     mysql_close($link);

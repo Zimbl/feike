@@ -5,7 +5,7 @@ define(["jquery"],function($){
             success:function(arr){
                 for(var i = 0;i < arr.length;i++){
                     var node3 = $(`
-                    <li><a href="">${arr[i].title}<em>></em></a></li>
+                    <li><a href="bgs.html">${arr[i].title}<em>></em></a></li>
                     `);
                     node3.appendTo(".nav-ul");
                 };

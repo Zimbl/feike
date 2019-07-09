@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <style>
+    <link rel="stylesheet" href="css/login.min.css">
+    <!-- <style>
         body{background: url(bg.png) center no-repeat;}
         #login{width: 400px; margin: 100px auto}
         #colwarning{padding: 5px; margin: 0px; text-align: center; display: none}
-    </style>
-    <script src = 'ajax.js'></script>
-    <script>
+    </style> -->
+    <script src = 'js/require.js' defer async="true" data-main = 'js/login'></script>
+
+  
+    <!-- <script>
         window.onload = function(){
             var oSubmit = document.getElementById("submit");
             var oColwarning = document.getElementById("colwarning");
@@ -47,29 +49,137 @@
                 })
             }
         }
-    </script>
+    </script> -->
 </head>
 <body>
+           <!-- head -->
+           <div class = "headbox">
+                <div class="headbox_top">
+                    <ul class="headbox_ul1">
+                        <li>
+                            <span class="iconfont">&#xe65f;</span>
+                            <a href="https://www.flyco.com/?fc=u1.c52479.g52480.k1504845752143.pz">收藏</a>
+                        </li>
+                        <li>
+                            <span class="iconfont">&#xe660;</span>
+                            <img src="https://www.flyco.com/theme/feike_pc//images/weixin.jpg" style="display:none;">微信</li>
+                    </ul>
+                    <ul class="headbox_ul2">
+                        <li><a target="_blank" href="login.html">登录</a></li>                 
+                        <li><a target="_blank" href="register.html">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        <!-- banner_top -->
+            <div class="banner_top clear">
+                <div class="logo">
+                        <a href="index.html">
+                        <img src="https://pic.flyco.net.cn/sources/new_pc/logo.gif" alt="">
+                    </a>
+                </div>
+                <div class="logo-head">
+                    <img src="https://pic.flyco.net.cn/sources/new_pc/home.png" alt="">
+                    <span>首页</span>
+                </div>
+                <div class="shopcar sc-pic" >
+                    <a href="shoppingcar.html" class="mini-car clear" id="banner_top_shopcar">
+                        <i class="iconfont">&#xf0179;</i>
+                        购物车
+                        <span class="mini-car-num sc_num">(0)</span>
+                    </a>
+                    <div class = "mini-car-list">
+                        <ul></ul>
+                        <div class = "list-1 clear">
+                            <div class="f1">
+                                <h5>
+                                    共计0件商品
+                                </h5>
+                                <p>合计：
+                                    <span>0元</span>
+                                </p>
+                            </div>
+                            <input type="button" class="btn" value="去购物车结算">
+                        </div>
+                    </div>
+                </div>
+                <div class="search">
+                    <form action="">
+                        <input class="txt" type="text" value="剃须刀">
+                        <input class="btn" type="button">
+                        <div>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    <!-- d登陆框 -->
     <div class = 'panel panel-primary' id = 'login'>
         <div class = 'panel-heading'>
-            登陆
+            欢迎登陆飞科商城
         </div>
         <div class = 'panel-body'>
             <div class = 'form-group'>
                 <label for="username">用户名：</label>
-                <input type="text" class = 'form-control' placeholder="用户名">
+                <input id="username" type="text" class = 'form-control' placeholder="用户名">
             </div>
             <div class = 'form-group'>
                 <label for="password">密码：</label>
-                <input type="password" class = 'form-control' placeholder="密码">
+                <input id="password" type="password" class = 'form-control' placeholder="密码">
             </div>
-            <div class = 'form-group'>
-                <div id = 'colwarning' class = 'alert alert-danger'>错误警告</div>
+            <div class = 'form-group warning'>
+                <div id = 'colwarning' class = 'alert alert-danger'></div>
             </div>
             <a href="register.html" class = 'text text-warning'>马上注册</a>
             <button id = 'submit' class = 'btn btn-primary pull-right'>登陆</button>
         </div>
 
     </div>
+   
+     <!-- 网页底部 -->
+     <div class="buttom-box">
+            <div class="inner-footer clear">
+                <ul class="inner-footer-ul">
+                
+                </ul>
+            </div>
+            <div class="center-footer">
+                <div class="center-footer-one">
+                  
+              
+                </div>
+                <div class="center-footer-two">
+                    <img src="../images/buttom_03.gif" alt="">
+                    
+                </div>
+                 
+            </div>
+            <div class="bottom-footer">
+                 <img class="feike" src="images/buttom_1_03.gif" alt=""> 
+                <div class="f2">
+                    <p class="p1"> 
+                            Copyright © 2013-2016上海飞科电器股份有限公司 | 版权所有 | <a href="">网站备案/许可证号：沪ICP备13041208号</a></p>
+                    <p>
+                        <a href="">增值电信营业经营许可认证:沪B2-20160083 | </a>
+                        <a href="">
+                            <img src="images/footer-buttom_12.gif" alt="">
+                            <span>沪公网安备 31010502001341号</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="f3">
+                    <a href=""><img src="images/footer-buttom_03.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <a href=""><img src="images/footer-buttom_05.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <a href=""><img src="images/footer-buttom_07.gif" alt="">
+                    </a>
+                    <span>|</span>
+                    <img src="images/footer-buttom_09.gif" alt="">
+                </div>
+            </div>
+        </div>
 </body>
 </html>
