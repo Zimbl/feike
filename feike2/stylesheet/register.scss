@@ -298,10 +298,11 @@ html,body{
 .panel{
     position: relative;
     width: 320px;
-    padding: 100px 0;
+    padding: 100px 100px;
     color: #6a6967;
     margin-left: auto;
     margin-right: auto;
+   
     label{
       height:32px;
       font-size:16px;
@@ -313,6 +314,8 @@ html,body{
       width:272px;
       height:25px;
       float: right;
+      border:0;
+      border-left:1px solid black;
     }
     #authcode{
         width:200px;
@@ -324,10 +327,12 @@ html,body{
     }
     .panel-body{
       padding-top: 38px;
+      margin-left:20px;
       .form-group{
         width:360px;
-        // height:22px;
-        margin-bottom:80px;
+        height:30px;
+        margin-bottom:31px;
+        border:1px solid black;
         span{
           float: right;
           display: block;
@@ -343,6 +348,10 @@ html,body{
             height:29px;
             font-size:20px;
         }
+      }
+      .danger-box{
+          border:0;
+          margin-bottom:10px;
       }
       #submit{
         float: right;
@@ -366,12 +375,13 @@ html,body{
 #authcode_span{font-size: 12px; color: gray;}
 #qiangdu{
       position: absolute;
-      top:325px;left:85px;
+      top:262px;left:140px;
     }
 #qiangdu span{
       font-size: 12px; color: gray;width:90px;
+      text-align: center;
       height:20px;display: block;float: left;
-      background-color: gray;
+      background-color: skyblue;
     }
  
     #qiangdu .active{     
@@ -380,7 +390,7 @@ html,body{
     #qiangdu .yuanben{     
       font-size: 12px;background-color: gray; color: black;
     }
-    #password_span{font-size: 12px; color: gray;}
+    #password_span{font-size: 12px; color: gray;position: absolute;right:140px;top:247px;}
     #ispassword_span{font-size: 12px; color: gray;}
 
   /* 底部******************************************************************** */

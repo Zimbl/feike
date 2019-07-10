@@ -1,5 +1,6 @@
 define(["ajax"],function (ajax) { 
     function yanzheng() { 
+        authcode();
         //账号***********************************************
         var oUsername = document.getElementById("username");
         oUsername.onblur = function (){
@@ -123,6 +124,27 @@ define(["ajax"],function (ajax) {
         }
         var ranDom_span = document.getElementById('random_span');
         ranDom_span.onclick =function(){
+            function test(n){
+            var arr = [];
+            for(var i = 0; i < n ;i++){
+                var tmp = parseInt(Math.random()*123);
+                if( tmp >= 0 && tmp <= 9){
+                    arr.push(tmp);
+                }else if(tmp >= 65  && tmp <= 90  || tmp >=97 &&tmp <=122){
+                    var char = String.fromCharCode(tmp);
+                    arr.push(char);
+                }else{
+                    i--;
+                } 
+            }
+            return arr.join('')
+            }
+            var random = document.getElementById('random');
+            random.innerHTML = test(6); 
+            
+        }
+
+        function authcode(){
             function test(n){
             var arr = [];
             for(var i = 0; i < n ;i++){
